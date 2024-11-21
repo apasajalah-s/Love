@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Asap&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  background: pink;
+  overscroll-behavior-x: none;
+  overscroll-behavior-y: none;
+}
+body {
+  font-family: "Asap", sans-serif;
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  text-align: center;
+  overflow-x: hidden;
+  color: white;
+  font-size: 8.0rem;
+}
+
+canvas {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+
+}
+h2 {
+  position: relative;
+  color: rgb(255, 253, 254);
+}
+section {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#arrow {
+  position: absolute;
+  bottom: 2vh;
+  left: 0;
+  right: 0;
+  font-size: 30vmin;
+  transform-origin: center center;
+  transform: rotate(90deg);
+  animation: arrow 2s 0s ease infinite;
+}
+@keyframes arrow {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+button {
+    padding: 10px 20px;
+    background-color: pink;
+    color: white;
+    border: 5px solid white;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font: bold;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: white;
+    color: pink;
+    border: 5px solid pink;
+}
+
+.arrow-down{
+      position: fixed;
+      bottom: 60px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: pink;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+}
+
+.arrow-down::before {
+      content: '';
+      border: solid white;
+      border-width: 0 5px 5px 0;
+      display: inline-block;
+      padding: 10px;
+      transform: rotate(45deg);
+      margin-top: -2px;
+}
+
+.arrow-down:hover {
+      background-color: pink;
+}
+
+@media (max-width: 768px) {
+    .konten {
+        font-size: 16px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .konten {
+        font-size: 14px;
+        padding: 5px;
+    }
+}
