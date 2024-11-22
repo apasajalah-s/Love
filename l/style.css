@@ -1,12 +1,28 @@
-body{
+* {
     padding: 0;
     margin: 0;
-    display: grid;
-    place-items: center;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    overflow: hidden;
+}
+
+canvas {
+    width: auto;
+    height: auto;
+    max-width: auto;
+    max-height: calc(50vh + 340px);
 }
 
 h1{
-    font-size: 20px;
+    font-size: 1.3em;
     font-family: 'Courier New', Courier, monospace;
     color: black;
     display: flexbox;
@@ -15,19 +31,22 @@ h1{
     background-color: white;
     border: 3px solid red;
     border-radius: 100px;
-    width: 150px;
-    line-height: 50px;
+    height: 30px;
+    width: 30vh;
+    line-height: 30px;
+    position: relative;
+    margin-bottom: 10px;
 }
 
 @media (max-width: 768px) {
-    .konten {
+    body {
         font-size: 16px;
         padding: 10px;
     }
 }
 
 @media (max-width: 480px) {
-    .konten {
+    body {
         font-size: 14px;
         padding: 5px;
     }
